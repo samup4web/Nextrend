@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget0"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minHeight="420dp"
+    android:minWidth="300dp" >
+
+    <TextView
+        android:id="@+id/widget31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="47dp"
+        android:text="Settings"
+        android:textSize="12dp" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="13dp"
+        android:layout_y="356dp" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/widget30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="50dp"
+        android:layout_y="12dp"
+        android:text="NeXtrend Music Relay" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="68dp"
+        android:layout_y="393dp"
+        android:text="M7012E - NeXtrenders 2011" android:textSize="12dp"/>
+
+    <Button
+        android:id="@+id/hide_btn"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_x="57dp"
+        android:layout_y="296dp"
+        android:text="Hide " />
+
+    <EditText
+        android:id="@+id/duration"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_x="160dp"
+        android:layout_y="78dp"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/widget35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="30dp"
+        android:layout_y="90dp"
+        android:text="Time settings" />
+
+    <TextView
+        android:id="@+id/widget34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="28dp"
+        android:layout_y="160dp"
+        android:text="Send track details" />
+
+    <ToggleButton
+        android:id="@+id/send_track_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="160dp"
+        android:layout_y="150dp"
+        android:checked="true"
+        android:text="ToggleButton" />
+
+    <ToggleButton
+        android:id="@+id/service_state_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="162dp"
+        android:layout_y="222dp"
+        android:checked="true"
+        android:text="ToggleButton" />
+
+    <TextView
+        android:id="@+id/widget37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="32dp"
+        android:layout_y="230dp"
+        android:text="Turn on Service" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="239dp"
+        android:layout_y="107dp"
+        android:text="Mins   "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12dp" />
+
+</AbsoluteLayout>
