@@ -32,17 +32,28 @@ public class MusicRelayActivity extends Activity {
 
 		Bundle extras = getIntent().getExtras();
 		String tracks_json_string = "";
+		
 		if (extras != null) {
-			tracks_json_string = extras.getString("music_relay");
-			Log.w("NEW ACTIVITY", tracks_json_string);
-		}
+			
+			try {
+				tracks_json_string = extras.getString("music_relay");
+				Log.w("NEW ACTIVITY", tracks_json_string);
 
-		// Set up our adapter
-		mAdapter = new MyExpandableListAdapter(tracks_json_string);
-		ExpandableListView epView = (ExpandableListView) findViewById(R.id.tracksExpandableList);
-		epView.setAdapter(mAdapter);
-		// epView.setListAdapter(mAdapter);
-		// registerForContextMenu(getExpandableListView());
+				// Set up our adapter
+
+				mAdapter = new MyExpandableListAdapter(tracks_json_string);
+				ExpandableListView epView = (ExpandableListView) findViewById(R.id.tracksExpandableList);
+				epView.setAdapter(mAdapter);
+			} catch (Exception e) {
+
+			}
+			// epView.setListAdapter(mAdapter);
+			// registerForContextMenu(getExpandableListView());
+
+		} else {
+			Log.w("NEXTREND", "HERE-2!");
+
+		}
 
 	}
 
@@ -132,8 +143,7 @@ public class MusicRelayActivity extends Activity {
 				for (String[] str : v_sub_info) {
 					children[x++] = str;
 				}
-				
-				
+
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -145,10 +155,10 @@ public class MusicRelayActivity extends Activity {
 
 		}
 
-//		private String[][] children = {
-//				{ "Arnold", "Barry", "Chuck", "David" },
-//				{ "Ace", "Bandit", "Cha-Cha", "Deuce" },
-//				{ "Fluffy", "Snuggles" }, { "Goldy", "Bubbles" } };
+		// private String[][] children = {
+		// { "Arnold", "Barry", "Chuck", "David" },
+		// { "Ace", "Bandit", "Cha-Cha", "Deuce" },
+		// { "Fluffy", "Snuggles" }, { "Goldy", "Bubbles" } };
 
 		public Object getChild(int groupPosition, int childPosition) {
 			return children[groupPosition][childPosition];

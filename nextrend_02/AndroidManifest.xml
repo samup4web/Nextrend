@@ -17,11 +17,11 @@
         
         android:debuggable="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
+        android:label="NeXtrend Music Relay App"
         android:name=".AppState"
         android:theme="@android:style/Theme.Dialog" >
         <activity
-            android:label="@string/app_name"
+            android:label="NeXtrend Music Relay App"
             android:name=".StartActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/app_name"
+            android:label="Music Hot-Spot Relay"
             android:name=".MusicRelayActivity" >
 <!--             <intent-filter > -->
 <!--                 <action android:name="android.intent.action.MAIN" /> -->
@@ -39,7 +39,16 @@
 <!--             </intent-filter> -->
         </activity>
         <activity
-            android:label="@string/app_name"
+            android:label="Alert!"
+            android:name=".AlertActivity" >
+<!--             <intent-filter > -->
+<!--                 <action android:name="android.intent.action.MAIN" /> -->
+
+<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter> -->
+        </activity>
+        <activity
+            android:label="NeXtrend Music Relay App"
             android:name=".MainActivity" >
             <intent-filter >
 

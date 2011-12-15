@@ -21,10 +21,12 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import android.app.ActivityManager;
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
@@ -57,7 +59,7 @@ public class MainActivity extends ListActivity {
 
 	private boolean playingTrack_flag;
 
-	private String serverAddress = "http://130.240.95.226";
+	private String serverAddress = "http://130.240.99.227";
 
 	private int duration; // MINS default - 30mins
 
@@ -213,12 +215,19 @@ public class MainActivity extends ListActivity {
 
 			try {
 				String response = get_data(tag_ID);
+				
 				Log.e(tag_ID, response);
 				show_music_relay(response);
 
-			} catch (IOException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				// e.printStackTrace();
+				//ALERT Stuffs
+				
+				Log.w("NEXTREND","ERRORORORORORORORORORO");
+				show_alert("Connection Error!");
+				//new AlertDialog.Builder(this).setTitle("Argh").setMessage("Watch out!").setIcon(R.drawable.icon).setNeutralButton("Close", null).show();
+				finish();
 			}
 
 			finish();
@@ -231,6 +240,14 @@ public class MainActivity extends ListActivity {
 		// TODO Auto-generated method stub
 		Intent i = new Intent(getApplicationContext(), MusicRelayActivity.class);
 		i.putExtra("music_relay", music_relay);		
+		startActivity(i);
+		finish();
+	}
+	
+	private void show_alert(String message) {
+		// TODO Auto-generated method stub
+		Intent i = new Intent(getApplicationContext(), AlertActivity.class);
+		i.putExtra("message", message);		
 		startActivity(i);
 		finish();
 	}
@@ -264,6 +281,8 @@ public class MainActivity extends ListActivity {
 		} catch (Exception e) {
 			// e.printStackTrace();
 			Log.e("NEXTREND", "Connection Error!");
+			
+			
 		}
 
 		// Log.d("POST-response", entityContents);

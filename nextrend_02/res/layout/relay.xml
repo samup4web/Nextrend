@@ -5,13 +5,6 @@
     android:orientation="vertical" android:minHeight="400dp" android:minWidth="300dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="64dp"
-        android:layout_y="12dp"
-        android:text="Music tracks played at spot" />
-
-    <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,5 +21,12 @@
         android:layout_x="22dp"
         android:layout_y="48dp" >
     </ExpandableListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="74dp"
+        android:layout_y="0dp"
+        android:text="Music tracks played at spot" />
 
 </AbsoluteLayout>
